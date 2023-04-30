@@ -6,9 +6,8 @@
     margin:0px;
     padding: 0px;
     box-sizing: border-box;
-    scroll-behavior: revert;
+    scroll-behavior:smooth;
     font-family: 'Be Vietnam Pro', sans-serif;
-    
    
 }
 
@@ -25,6 +24,10 @@ a{
     color: black;
     cursor: pointer;
 
+}
+
+.wrapper{
+    overflow-x: hidden;
 }
 
 
@@ -139,7 +142,7 @@ header .name{
 
 /* name details */
 .header_section_left{
-    width: 60%;
+    width: 55rem;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -183,9 +186,10 @@ header .name{
 
 .header_section_left .content{
     margin-top: 1rem;
-    width: 70%;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    width: 80%;
 }
 
 
@@ -252,8 +256,8 @@ button{
   /* styling right part of div */
 
 .header_section_right{
-    width: 40%;
     position: relative;
+    width: 25rem;
     
 }
 
@@ -262,6 +266,7 @@ button{
 }
 
 .icon-photo img{
+    position: relative;
     height: 30rem;
     width: 25rem;
     padding: 2.5em;
@@ -296,14 +301,14 @@ button{
 
 .icon-sharingan{
     position: absolute;
-    left:21.1rem;
+    right: 0;
     z-index: 10;
 }
 
 .icon-sharingan img{
     animation: sharigan 0.8s linear infinite;
-    height: 3rem;
-    width: 3rem;
+    height: 3em;
+    width: 3em;
 }
 
 @keyframes sharigan {
@@ -327,8 +332,8 @@ button{
 .icon-dots{
     z-index: 9;
     animation: dots 5s linear infinite;
-    bottom: -1rem;
-    left: 19rem;
+    bottom: -1.1em;
+    right: 0;
 }
 
 @keyframes dots {
@@ -336,10 +341,10 @@ button{
         transform: translateY(0rem);
     }
     50%{
-        transform: translateY(-0.9rem);
+        transform: translateY(-0.9em);
     }
     100%{
-        transform: translateY(0.18rem);
+        transform: translateY(0.18em);
     }
     
 }
@@ -349,7 +354,7 @@ button{
 
 .icon-plus{
     z-index: 9;
-    left:12rem;
+    right:50%;
     animation: plus 5s linear infinite;
 }
 @keyframes plus {
@@ -357,7 +362,7 @@ button{
         transform: translateY(0rem);
     }
     50%{
-        transform: translateY(-2.5rem);
+        transform: translateY(-2.5em);
     }
     100%{
         transform: translateY(0rem);
@@ -370,7 +375,7 @@ button{
 
 .icon-circle{
     z-index: 9;
-    bottom: -1rem;
+    bottom: -1em;
     animation: circle 5s linear infinite;
 }
 @keyframes circle {
@@ -379,12 +384,12 @@ button{
         bottom: 0px;
     }
     40%{
-       left: 2rem;
-       bottom: 5rem;
+       left: 2em;
+       bottom: 5em;
     }
     60%{
-        left: -1rem;
-        bottom: 5rem;
+        left: -1em;
+        bottom: 5em;
     }
     100%{
         left: 0px;
@@ -397,22 +402,24 @@ button{
 
 .icon-zigzags{
    z-index: 9;
+   left: 0px;
+   width: 5em;
    animation: zigzag 5s linear infinite;
 }
 
 @keyframes zigzag {
 
     0%{
-        left: -0.5rem;
-        top: 0.8rem;
+        left: -0.5em;
+        top: 0.8em;
     }
     50%{
-     left: 0.5rem;
-        top: 1rem;
+     left: 0.5em;
+        top: 1em;
     }
     100%{
-        left:-0.5rem;
-        top: 0.8rem;
+        left:-0.5em;
+        top: 0.8em;
     }
     
 }
@@ -425,19 +432,15 @@ button{
 
 
 .Project{
-    /* background-color: rgb(231, 231, 231); */
     background-color: rgb(231, 231, 231);
-    width: 1400px;
+    width: 100vw;
     margin: auto;
 }
 
 .Project_heading{
-    margin-top: 4rem;
     font-size: 5rem;
     font-weight: 800;
     color: #ee7b61;
-    /* display: flex;
-    justify-content: center; */
     text-align: center;
 }
 
@@ -462,10 +465,12 @@ button{
     z-index: 8;
     transition: all 0.5s;
 }
-#project1:hover .project-content-left{ /* pointing container on hover */
+#project1:hover .project-content-left{
+     /* pointing container on hover */
     transform: scale(1.05);
     position: relative;
 }
+
 
 
 
@@ -532,8 +537,8 @@ button{
     top: 0;
     left: 0;
     bottom: 0;
-    right: 0;
-    background:radial-gradient(#9aa6e5be,#499088,#76e0b07e);
+    right: 0;    
+    background: linear-gradient(90deg, hsla(180, 13%, 58%, 0.4) 0%, hsla(335, 16%, 61%, 0.4) 100%);
     transform: scaleX(0);
     transform-origin:center;
     transition: all 0.8s;
@@ -552,7 +557,6 @@ button{
 
 .project-skills{
     position: absolute;
-    width: 40%;
     top: 6rem;
     z-index: 6;
     display: flex;
@@ -598,9 +602,20 @@ button{
 
 .button_links{
     position: absolute;
-    width: 85%;
     top: 24rem;
+    width: fit-content;
+    white-space: nowrap;
     z-index: 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: inline;
+}
+.icon_center{
+    position: absolute;
+    bottom:2rem;
+    right:-2rem;
+    
 }
 .icon{
     cursor:pointer;
@@ -651,7 +666,8 @@ button{
     z-index: 8;
     transition: all 0.5s;
 }
-#project2:hover .project-content-right{ /* pointing container on hover */
+#project2:hover .project-content-right{ 
+    /* pointing container on hover */
     transform: scale(1.05);
     position: relative;
 }
@@ -683,7 +699,8 @@ button{
     left: 0;
     bottom: 0;
     right: 0;
-    background:radial-gradient(#9aa6e5be,#499088,#76e0b07e);
+    background: hsla(180, 13%, 58%, 1);
+    background: linear-gradient(90deg, hsla(180, 13%, 58%, 0.4) 0%, hsla(335, 16%, 61%, 0.4) 100%);
     transform: scaleX(0);
     transform-origin:center;
     transition: all 0.7s;
@@ -771,6 +788,9 @@ button{
 
 .project4-content > .project-description{
     width: 100%;
+}
+.project4-content > .project-skills{
+    min-width:300px ;
 }
 
 .my_tech_stack{
@@ -884,19 +904,23 @@ button{
 
 }
 .contact{
-    width: 1400px;
-    margin: auto;
+    position: relative;
+    width: 100vw;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(231, 231, 231);
-    height: 53.5rem;
 }
 .contact_me{
     width: 1200px;
-    margin: 5rem auto;
+    margin-bottom: 1em;
 
 }
 .contact_me_heading{
     font-size: 4rem;
     color: var(--bgOrange);
+    margin: 1rem;
 }
 .question_tag{
     margin-top:0.5rem;
@@ -973,7 +997,8 @@ button{
     padding-bottom: 40px;
 }
 
-footer{
+
+.footer_section{
   width: 100vw;
   position:relative;
   background-color:  #343d68;
@@ -1015,6 +1040,133 @@ footer{
     color: var(--bgOrange);
     transform: scale(1.1);
     cursor:pointer;
+}
+
+@media (max-width:1400px) {
+    .wrapper{
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+    header{
+        width: 1000px;
+    }
+    .Hero_section{
+        width: 1000px;
+    }
+    .header_section_right{
+        width: 30%;
+    }
+    .icon-photo img{
+        height: 22rem;
+        width: 18rem;
+    }
+    .faded-text{
+        margin-top: 2rem;
+        font-size: 3rem;
+    }
+
+    .project-number-left{
+        margin-right:3rem;
+    }
+    .project_card_right , .project_card_left{
+        left: 0;
+        margin:0px 2rem ;
+
+    }
+    .my_tech_stack{
+        width: 1100px;
+    }
+    .contact_me{
+        width: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+    .faded-text_skill{
+        right:5rem; 
+    }
+    
+}
+
+@media (max-width:1120px) {
+    body{
+        font-size: 25px;
+        font-family: 'Titillium Web', sans-serif;
+        color: #000;
+        font-weight: bolder;
+        
+    }
+    .faded-text{
+        display: none;
+    }
+    .icon-photo img , .header_section_right{
+        width: 16em;
+        height: 18em;
+    }
+    .Hero_section{
+        display: flex;
+        flex-direction: column;
+        height:902px;
+    }
+    .Hire_me{
+        position: absolute;
+        bottom: -4rem;
+        left: 28%;
+    }
+
+    .project_container{
+        width: 67.5rem;
+    }
+    .Button_animated{
+        margin: 0;
+    }
+    .icon_center{
+        position: absolute;
+        left: 15rem;
+        top:0.8rem
+    }
+
+
+    .my_tech_stack{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 900px;
+      margin-bottom: 40px;
+      gap:10px;
+    }
+    .Tech_stack{
+        width: 100%;
+    }
+    .Tech_stack > p{
+        line-height: 40px;
+    }
+    .faded-text_skill{
+        font-size: 100px;
+        margin-bottom: 35px;
+
+    }
+    .contact{
+        margin-top:50px;
+    }
+    .contact_me{
+        height: 1000px;
+    }
+    .contact_me_heading{
+        padding-top: 6rem;
+    }
+    
+
+}
+@media (max-width:620px) {
+   .Tech_stack p{
+    font-size: 50px;
+   }
 }
 
 
