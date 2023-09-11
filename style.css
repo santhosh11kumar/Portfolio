@@ -236,6 +236,10 @@ button{
     box-shadow:4px 5px #6d61ee;
     font-weight: bold;
   }
+  .Hire_me:active{
+    
+    transform: scale(0.9);
+  }
 
   @keyframes hire_me {
     from{
